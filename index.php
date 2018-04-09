@@ -72,6 +72,8 @@ while ($file = readdir($dir_handle)) {
             echo "<img class='tu' il='false' src='027.jpg' srcs='".$dirFile."'>";
         if(substr(strrchr($file, '.'), 1)=='png')
             echo "<img class='tu' il='false' src='027.jpg' srcs='".$dirFile."'>";
+		else if(substr(strrchr($file, '.'), 1)=='mp4'||substr(strrchr($file, '.'), 1)=='mkv')
+            echo "<video src= '".$dirFile."' controls='controls' width='100%'>您的浏览器不支持。</video>";
 //        else
 //            echo "<a href='".$dirFile."'>";
     }
